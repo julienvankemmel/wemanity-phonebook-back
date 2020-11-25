@@ -8,5 +8,5 @@ src/public/bundles/
 src/var/
 src/vendor/
 ###< symfony/framework-bundle ###
-database/data/*
-logs/*
+docker/database/data/*
+docker/logs/*
