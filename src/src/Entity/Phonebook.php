@@ -5,6 +5,7 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\PhonebookRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ApiResource()
@@ -21,16 +22,30 @@ class Phonebook
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(
+     *      message="First name is required"
+     * )
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(
+     *      message="Last name is required"
+     * )
      */
     private $lastname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(
+     *      message="Phone number is required"
+     * )
+     * @Assert\Regex(
+     *      pattern="^\+\d+\s\d+\s\d{6,}$^",
+     *      match=true,
+     *      message="Phone number isn't valid"
+     * )
      */
     private $phone;
 
