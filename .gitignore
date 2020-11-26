@@ -9,4 +9,4 @@ src/var/
 src/vendor/
 ###< symfony/framework-bundle ###
 docker/database/data/*
-docker/logs/*
+docker/logs/nginx/*
