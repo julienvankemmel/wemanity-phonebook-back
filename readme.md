@@ -4,7 +4,7 @@
 
 To run this project you will need docker on your computer, if you don't have it, please refer to official documentation at :
 
-[Get docker]: https://docs.docker.com/get-docker/
+[Get docker](https://docs.docker.com/get-docker/)
 
 
 
